@@ -2,7 +2,7 @@
 """Module that defines a Square"""
 
 
-class Square():
+class square():
     """Defines class Square"""
     width = 0
     height = 0
@@ -25,7 +25,7 @@ class Square():
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = Square(width=12, height=9)
+    s = square(width=12, height=9)
     print(s)
     print(s.areasquare())
     print(s.perimsquare())
