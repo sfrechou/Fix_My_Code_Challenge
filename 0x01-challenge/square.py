@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """Module that defines a Square"""
 
-class square():
+
+class Square():
     """Defines class Square"""
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         """Instantiates Square"""
         for key, value in kwargs.items():
@@ -25,7 +25,7 @@ class square():
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
