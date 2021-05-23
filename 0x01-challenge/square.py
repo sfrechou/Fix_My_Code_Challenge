@@ -4,18 +4,15 @@ Module that defines a Square
 """
 
 
-class Square():
+class square():
     """Defines class Square"""
-
     width = 0
     height = 0
 
-    def __init__(self, width, height):
-        """Instantiates Square"""
-        if type(width) is int:
-            self.width = width
-        if type(height) is int:
-            self.height = height
+    def __init__(self, *args, **kwargs):
+        """Init sequence."""
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def areasquare(self):
         """Area of the Square"""
@@ -30,7 +27,7 @@ class Square():
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = Square(width=9, height=9)
+    s = square(width=9, height=9)
     print(s)
     print(s.areasquare())
     print(s.perimsquare())
