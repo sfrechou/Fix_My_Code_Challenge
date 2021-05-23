@@ -4,7 +4,7 @@ Module that defines a square
 """
 
 
-class square():
+class Square():
     """Defines a square"""
     width = 0
 
@@ -25,7 +25,7 @@ class square():
         return "{}/{}".format(self.width, self.width)
 
 if __name__ == "__main__":
-    s = square(width=12)
+    s = Square(width=12)
     print(s)
     print(s.area())
     print(s.perimeter())
