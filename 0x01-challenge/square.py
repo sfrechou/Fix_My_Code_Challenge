@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""
+Module that defines a square
+"""
+
 
 class square():
-    
+    """Defines a square"""
     width = 0
 
-    
     def __init__(self, *args, **kwargs):
         """Instantiates a Square"""
         for key, value in kwargs.items():
