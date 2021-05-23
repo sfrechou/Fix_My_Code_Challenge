@@ -16,7 +16,7 @@ class Square():
         """Area of the Square"""
         return self.width * self.height
 
-    def permin_square(self):
+    def perim_square(self):
         """Perimeter of the Square"""
         return (self.width * 2) + (self.height * 2)
 
