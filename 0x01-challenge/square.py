@@ -4,7 +4,7 @@ Module that defines a Square
 """
 
 
-class square():
+class Square():
     """Defines class Square"""
     width = 0
     height = 0
@@ -14,11 +14,11 @@ class square():
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    def areasquare(self):
+    def area(self):
         """Area of the Square"""
         return self.width * self.height
 
-    def perimsquare(self):
+    def perim(self):
         """Perimeter of the Square"""
         return (self.width * 2) + (self.height * 2)
 
@@ -27,7 +27,7 @@ class square():
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = square(width=9, height=9)
+    s = Square(width=10, height=9)
     print(s)
-    print(s.areasquare())
-    print(s.perimsquare())
+    print(s.area())
+    print(s.perim())
