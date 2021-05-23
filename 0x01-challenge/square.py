@@ -6,8 +6,7 @@ Module that defines a Square
 
 class Square():
     """Defines class Square"""
-    width = 0
-    height = 0
+    side = 0
 
     def __init__(self, *args, **kwargs):
         """Init sequence."""
@@ -19,18 +18,18 @@ class Square():
 
     def area(self):
         """Area of the Square"""
-        return self.width * self.height
+        return self.side * 2
 
     def perim(self):
         """Perimeter of the Square"""
-        return (self.width * 2) + (self.height * 2)
+        return self.side * 4
 
     def __str__(self):
         """String rep of Square"""
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.side, self.side)
 
 if __name__ == "__main__":
-    s = Square(width=9, height=9)
+    s = Square(side=9, height=9)
     print(s)
     print(s.area())
     print(s.perim())
