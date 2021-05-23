@@ -4,7 +4,7 @@ Module that defines a Square
 """
 
 
-class square():
+class square:
     """Defines class Square"""
     side = 0
 
