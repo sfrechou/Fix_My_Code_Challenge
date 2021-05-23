@@ -12,7 +12,10 @@ class Square():
     def __init__(self, *args, **kwargs):
         """Init sequence."""
         for key, value in kwargs.items():
-            setattr(self, key, value)
+            if type(value) is int and value > 0:
+                setattr(self, key, value)
+            else:
+                raise TypeError("Type Error")
 
     def area(self):
         """Area of the Square"""
@@ -27,7 +30,7 @@ class Square():
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = Square(width=10, height=9)
+    s = Square(width=9, height=9)
     print(s)
     print(s.area())
     print(s.perim())
