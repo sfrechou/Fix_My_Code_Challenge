@@ -10,8 +10,12 @@ class Square():
 
     def __init__(self, *args, **kwargs):
         """Instantiates a Square"""
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        if kwargs:
+            for key, value in kwargs.items():
+                if type(value) is int and value >= 0:
+                    setattr(self, key, value)
+        else:
+            self.width = width
 
     def area(self):
         """Area of a square"""
