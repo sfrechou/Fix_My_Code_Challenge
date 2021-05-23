@@ -8,6 +8,7 @@ class Square:
     """Class that defines a Square"""
 
     width = 0
+    height = 0
 
     def __init__(self, width=0, height=0):
         """Instantiation attributes"""
