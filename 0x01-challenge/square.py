@@ -1,35 +1,29 @@
 #!/usr/bin/python3
-"""
-Module that defines a Square
-"""
 
+class square():
+    
+    width = 0
 
-class square:
-    """Defines class Square"""
-    side = 0
-
+    
     def __init__(self, *args, **kwargs):
-        """Init sequence."""
+        """Instantiates a Square"""
         for key, value in kwargs.items():
-            if type(value) is int and value > 0:
-                setattr(self, key, value)
-            else:
-                raise TypeError("Type Error")
+            setattr(self, key, value)
 
     def area(self):
-        """Area of the Square"""
-        return self.side * 2
+        """Area of a square"""
+        return self.width * self.width
 
-    def perim(self):
-        """Perimeter of the Square"""
-        return self.side * 4
+    def perimeter(self):
+        """Perimeter of a square"""
+        return self.width * 4
 
     def __str__(self):
-        """String rep of Square"""
-        return "{}/{}".format(self.side, self.side)
+        return "{}/{}".format(self.width, self.width)
 
 if __name__ == "__main__":
-    s = square(side=9, height=9)
+
+    s = square(width=12, height=9)
     print(s)
     print(s.area())
-    print(s.perim())
+    print(s.perimeter())
