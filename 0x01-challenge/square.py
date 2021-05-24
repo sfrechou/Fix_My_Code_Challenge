@@ -1,29 +1,29 @@
 #!/usr/bin/python3
 """
-My square
+Module that defines a Square
 """
 
 
 class Square():
-    """Square class"""
+    """Class that defines a Square"""
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """Init method"""
+        """Instantiate a Square"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """Area of a square"""
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ Perimeter of square """
+        """Perimeter of a square"""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ string method """
+        """String repr of a Square"""
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
