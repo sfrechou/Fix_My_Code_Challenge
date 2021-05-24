@@ -20,8 +20,8 @@ class Square:
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -53,21 +53,21 @@ class Square:
 
     def area(self):
         """Calculates the area of a Rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """Calculates the permiter of a rectangle"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
         else:
-            return (self.__width * 2) + (self.__height * 2)
+            return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """Prints therep of a Square"""
-        return "{}/{}".format(self.__width, self.__height)
+        return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
-    s = Square(width=12, height=9)
+    s = Square(width=9, height=9)
     print(s)
     print(s.area())
     print(s.perimeter())
